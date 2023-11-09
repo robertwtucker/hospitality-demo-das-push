@@ -88,7 +88,7 @@ async function sendPushNotification(
         message: context.parameters.messageContent as string,
         title: context.parameters.messageTitle as string,
         content: {
-          documentId: context.parameters.documentId as number,
+          documentId: context.parameters.documentId as string,
         },
       },
     ],
