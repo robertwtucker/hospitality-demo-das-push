@@ -51,7 +51,7 @@ export function getDescription(): ScriptDescription {
         id: 'documentId',
         displayName: 'Document ID',
         description: 'The ID of the document sent along with the notification.',
-        type: 'String',
+        type: 'Number',
         required: true,
       },
     ],
@@ -83,7 +83,7 @@ async function sendPushNotification(
         message: context.parameters.messageContent as string,
         title: context.parameters.messageTitle as string,
         content: {
-          documentId: context.parameters.documentId as string,
+          documentId: context.parameters.documentId as number,
         },
       },
     ],
