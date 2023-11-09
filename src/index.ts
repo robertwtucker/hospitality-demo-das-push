@@ -51,7 +51,7 @@ export function getDescription(): ScriptDescription {
         id: 'documentId',
         displayName: 'Document ID',
         description: 'The ID of the document sent along with the notification.',
-        type: 'Number',
+        type: 'String',
         required: true,
       },
     ],
@@ -74,6 +74,11 @@ async function sendPushNotification(
   context: Context,
   data: Reservation,
 ): Promise<void> {
+  console.log(
+    'Sending push notification for document: ',
+    context.parameters.documentId,
+  )
+
   const body = {
     applicationId: context.parameters.applicationId as string,
     notifications: [
@@ -101,7 +106,9 @@ async function sendPushNotification(
   })
 
   const json = await response.json()
-  if (!response.ok) {
+  if (response.ok) {
+    console.log('Successfully queued push notification: ', JSON.stringify(json))
+  } else {
     throw new Error(
       `Non-OK DAS API response: ${response.status} ${
         response.statusText
