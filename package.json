@@ -1,6 +1,6 @@
 {
   "name": "das-push",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An Evolve (Generate) component for sending push notifications with Digital Advantage",
   "type": "module",
   "private": true,
