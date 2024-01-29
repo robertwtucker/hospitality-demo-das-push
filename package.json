@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/robertwtucker/hospitality-demo-das-push/blob/master/README.md",
   "devDependencies": {
-    "@quadient/evolve-scripting-api": "^0.0.39",
+    "@quadient/evolve-scripting-api": "^0.0.60",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "eslint": "^8.53.0",
